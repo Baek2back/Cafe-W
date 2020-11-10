@@ -1,6 +1,31 @@
-<extends src="base.html">
-  <block name="nav"><include src="nav.html"></include></block>
-  <block name="content">
-    <h2>Home</h2>
+<extends src="layouts/base.html">
+  <block name="commons">
+    <include src="head/commons.html"></include>
+  </block>
+  <block name="openGraph">
+    <include src="head/open-graph.html"></include>
+  </block>
+  <block name="twitterCard">
+    <include src="head/twitter-card.html"></include>
+  </block>
+  <block name="headerContainer">
+    <include src="components/commons/skip-nav.html"></include>
+    <include src="layouts/header.html"></include>
+  </block>
+  <block name="mainContainer">
+    <main>
+      <include src="components/commons/main-notice.html"></include>
+      <include src="components/main/season-item.html"></include>
+      <include src="components/main/class-recommendation.html"></include>
+      <include src="components/main/class-introduction.html"></include>
+      <include src="components/main/class-youtube.html"></include>
+      <include src="components/main/cafe-reserve.html"></include>
+      <include src="components/main/pick-favorite.html"></include>
+      <include src="components/main/coffee-lab.html"></include>
+      <include src="components/main/find-nearby-store.html"></include>
+    </main>
+  </block>
+  <block name="footerContainer">
+    <include src="layouts/footer.html"></include>
   </block>
 </extends>
